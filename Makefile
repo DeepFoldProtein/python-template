@@ -15,10 +15,10 @@ set-precommit:
 	pre-commit install
 
 set-dev:
-	pip3 install -r requirements.txt
+	pip3 install -r requirements-dev.txt
 
 set-test:
-	python3 -m unittest tests/
+	python3 -m unittest --verbose
 
 set-style:
 	ruff check --fix .

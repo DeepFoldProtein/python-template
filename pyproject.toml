@@ -1,24 +1,33 @@
+[project]
+name = "repository"
+version = "0.0.0"
+requires-python = ">=3.12"
+readme = "README.md"
+# license = { file = "LICENSE" }
+dependencies = []
+
 [tool.ruff]
 line-length = 119
 
 # Exclude the following files and directories.
 exclude = [
-    ".git",
-    ".hg",
-    ".mypy_cache",
-    ".tox",
-    ".venv",
-    "_build",
-    "buck-out",
-    "build",
-    "dist",
-    "env",
-    "venv",
+  ".git",
+  ".hg",
+  ".mypy_cache",
+  ".tox",
+  ".venv",
+  "_build",
+  "buck-out",
+  "build",
+  "dist",
+  "env",
+  "venv",
 ]
 
 [tool.ruff.lint]
 # Never enforce `E501` (line length violations).
-ignore = ["C901", "E501", "E402"]
+# Never enforce `E741` (ambiguous variable name).
+ignore = ["C901", "E501", "E402", "E741"]
 select = ["C", "E", "F", "I", "W"]
 
 # Ignore import violations in all `__init__.py` files.
